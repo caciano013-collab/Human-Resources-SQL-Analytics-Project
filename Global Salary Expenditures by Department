@@ -1,0 +1,7 @@
+Objective: Identify which functional areas generate the highest cumulative operational salary costs.
+
+SELECT d.department_name, SUM(e.salary) AS total_salary_cost
+FROM departments d
+INNER JOIN employees e ON d.department_id = e.department_id
+GROUP BY d.department_id, d.department_name
+ORDER BY total_salary_cost DESC;
