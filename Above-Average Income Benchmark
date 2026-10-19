@@ -1,0 +1,6 @@
+Objective: Isolate workforce members whose compensation exceeds the global company salary average (Calculated company baseline: `$78,800.00`).
+
+SELECT first_name, last_name, salary
+FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees)
+ORDER BY salary DESC;
