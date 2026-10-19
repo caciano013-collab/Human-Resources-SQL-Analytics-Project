@@ -1,0 +1,8 @@
+Objective: Map employee records to their designated reporting lines by implementing a recursive self-join strategy.
+
+SELECT 
+    m.first_name AS manager_name,
+    e.first_name AS employee_name
+FROM employees e
+INNER JOIN employees m ON e.manager_id = m.employee_id
+ORDER BY manager_name;
