@@ -1,0 +1,7 @@
+The data structure follows a classical transactional enterprise schema:
+
+ `employees`: Contains detailed employee records, including salary information, foreign keys linking employees to jobs and departments, and a self-referencing relationship for management hierarchy (`manager_id` references `employee_id`).
+
+ `departments`: Stores information about business units and their physical office locations.
+
+ `jobs`: Defines job titles and salary ranges, including minimum (`min_salary`) and maximum (`max_salary`) salary limits.
